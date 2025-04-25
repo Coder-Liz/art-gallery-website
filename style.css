@@ -211,6 +211,9 @@
   @media (min-width: 75rem) {
     .hero {
       grid-template-columns: 1fr;
+
+      display: flex;
+      place-content: center;
     }
 
     .hero .wrapper {
@@ -218,11 +221,6 @@
       margin-inline: auto;
 
       position: relative;
-    }
-
-    picture {
-      display: flex;
-      place-content: center;
     }
 
     .hero-image {
@@ -275,7 +273,13 @@
     }
 
     .hero-h1 .mask-art {
-      background: var(--clr-white);
+      background: linear-gradient(
+        to right,
+        var(--clr-white) 0%,
+        var(--clr-white) 65%,
+        var(--clr-black) 65%,
+        var(--clr-black) 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -292,7 +296,7 @@
     }
 
     .hero-description {
-      width: 26ch;
+      width: 24ch;
     }
   }
 }
